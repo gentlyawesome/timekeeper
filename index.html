@@ -1,7 +1,7 @@
 <html>
 <head>
 
-  <title>Materialize CSS Framework Demo</title>
+  <title>TimeKeeper</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,7 +27,7 @@
      </ul>
     </div>
 
-    <div id="version1" class="col s12">
+    <div id="version1">
     <div class="container">
       <div class="row">
         <div class="col s8">
@@ -70,7 +70,7 @@
         </div>
         <div class="col s4">
           <div class="card-panel red white-text">
-            <p id="time">Can't connect to the internet...</p>
+            <p class="time">Can't connect to the internet...</p>
           </div>
            <ul class="collection">
             <li class="collection-item avatar">
@@ -108,7 +108,7 @@
     </div>
     </div> <!-- Version 1 -->
 
-    <div id="version2" class="col s12">
+    <div id="version2">
     <div class="container">
       <div class="row">
         <div class="col s8">
@@ -163,7 +163,7 @@
         </div>
         <div class="col s4">
           <div class="card-panel red white-text">
-            <p id="time">Can't connect to the internet...</p>
+            <p class="time">Can't connect to the internet...</p>
           </div>
           <ul class="collection">
            <li class="collection-item avatar">
@@ -201,8 +201,63 @@
     </div>
     </div> <!-- Version 2 -->
 
-    <div id="version3" class="col s12">Version3</div>
+    <div id="version3" >
+    <div class="container">
+      <div class="row">
+        <div class="col s7">
+          <ul class="collection">
+            <li class="collection-item avatar white-text green">
+              <img src="assets/images/yuna.jpg" alt="" class="circle">
+              <span class="title">Jeremy Lysol</span>
+              <p> Clocked IN @ 8:05 am </p>
+              <a href="#!" class="secondary-content white-text"><i class="material-icons">alarm_on</i></a>
+            </li>
+            <li class="collection-item avatar white-text red">
+              <img src="assets/images/jobert.jpg" alt="" class="circle">
+              <span class="title">Jobert Bsil</span>
+              <p> Clocked OUT @ 9:05 am </p>
+              <a href="#!" class="secondary-content white-text"><i class="material-icons">alarm_off</i></a>
+            </li>
+            <li class="collection-item avatar white-text green">
+              <img src="assets/images/sophi.jpg" alt="" class="circle">
+              <span class="title">Sophi Soli</span>
+              <p> Clocked IN @ 10:05 am </p>
+              <a href="#!" class="secondary-content white-text"><i class="material-icons">alarm_on</i></a>
+            </li>
+            <li class="collection-item avatar white-text red">
+              <img src="assets/images/yuna.jpg" alt="" class="circle">
+              <span class="title">Jeremy Lysol</span>
+              <p> Clocked OUT @ 4:04 pm </p>
+              <a href="#!" class="secondary-content white-text"><i class="material-icons">alarm_off</i></a>
+            </li>
+            <li class="collection-item avatar white-text yellow">
+              <img src="assets/images/sophi.jpg" alt="" class="circle">
+              <span class="title">Sophi Soli</span>
+              <p> Break IN @ 3:05 am </p>
+              <a href="#!" class="secondary-content white-text"><i class="material-icons">access_time</i></a>
+            </li>
+            <li class="collection-item avatar white-text orange">
+              <img src="assets/images/sophi.jpg" alt="" class="circle">
+              <span class="title">Sophi Soli<span>
+              <p> Break OUT @ 4:05 am </p>
+              <a href="#!" class="secondary-content white-text"><i class="material-icons">av_timer</i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col s5">
+        <div class="card-panel">
+          <p class="time center">Can't connect to the internet...</p>
+	  <div class="divider"></div>
+          <a class="waves-effect waves-green btn-flat z-depth-1 "><i class="material-icons left">alarm_on</i>Clock IN</a>
+          <a class="waves-effect waves-red btn-flat "><i class="material-icons left">alarm_off</i>Clock OUT</a>
+          <a class="waves-effect waves-yellow btn-flat  "><i class="material-icons left">access_time</i>Break IN</a>
+          <a class="waves-effect waves-orange btn-flat "><i class="material-icons left">av_timer</i>Break OUT</a>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
+  </div> <!-- Version 3 -->
  
 
   <!-- jQuery is required by Materialize to function -->
@@ -211,7 +266,7 @@
   <script type="text/javascript" src="js/moment.js"></script>
   <script type="text/javascript">
   $(function(){
-    $("#time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    $(".time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
     $('ul.tabs').tabs();
   });
   </script>
